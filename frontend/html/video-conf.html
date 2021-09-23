@@ -1,0 +1,65 @@
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <meta name="copyright" content="MACode ID, https://macodeid.com/">
+
+  <title>CARE4YOU</title>
+
+  <link rel="stylesheet" href="../assets/css/maicons.css">
+
+  <link rel="stylesheet" href="../assets/css/bootstrap.css">
+
+  <link rel="stylesheet" href="../assets/vendor/owl-carousel/css/owl.carousel.css">
+
+  <link rel="stylesheet" href="../assets/vendor/animate/animate.css">
+
+  <link rel="stylesheet" href="../assets/css/theme.css">
+
+    <script src='https://meet.jit.si/external_api.js'></script>
+  </head>
+  <body>
+      <div style=" width: 100%;padding: 0%;  border-radius: 20px;  box-shadow: dimgray; align-items: center; ">
+          
+          <h1 style="text-align: center; color:rgb(18, 145, 124);">Click below start button to connect to a therapist!</h1>
+          <img src="../assets/img/blog/video-call.jpg" alt="" style=" width: 45%; border-radius: 20px; justify-content: center;">
+          
+      </div>
+      <button  class="btn btn-primary" id="start" type="button" target="_blank" onclick="video()">Start</button>
+   
+  
+  <div id="jitsi-container">
+  </div>
+   
+  <script>
+  function video(){
+    var button = document.querySelector('#start');
+  var container = document.querySelector('#jitsi-container');
+  var api = null;
+   
+  button.addEventListener('click', () => {
+      var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+      var stringLength = 30;
+   
+      function pickRandom() {
+      return possible[Math.floor(Math.random() * possible.length)];
+      }
+   
+  var randomString = Array.apply(null, Array(stringLength)).map(pickRandom).join('');
+   
+      var domain = "meet.jit.si";
+      var options = {
+          "roomName": randomString,
+          "parentNode": container,
+          "width": 500,
+          "height": 400,
+      };
+      api = new JitsiMeetExternalAPI(domain, options);
+  });
+   
+  }
+  </script>
+  </body>
+  </html>
