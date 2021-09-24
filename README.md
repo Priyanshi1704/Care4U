@@ -22,7 +22,6 @@ $ npm i express socket.io ejs
 
 $ npm i --save-dev nodemon 
 
-After running
 
 Extract all the files from Group Chat.zip to CARE4U-MAIN
 go to ../html/index.html
