@@ -22,8 +22,9 @@ $ npm i express socket.io ejs
 
 $ npm i --save-dev nodemon 
 
+After running 
 Extract all the files from Group Chat.zip to CARE4U-MAIN
-After running go to ../html/index.html
+go to ../html/index.html
 Run the file index.html with "Open with live server" option on right click on file
 
 Future features:
