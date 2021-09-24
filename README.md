@@ -13,9 +13,13 @@ To run:
 Please be sure you have expressjs and socket.io modules installed before running this application.
 
 On Windows/Mac/Linux:
+
 $ npm init -y
+
 $ npm i express socket.io ejs
+
 $ npm i --save-dev nodemon 
+
 
 After running go to ../html/index.html
 Run the file index.html with "Open with live server" option on right click on file
